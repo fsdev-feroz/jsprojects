@@ -1,15 +1,17 @@
-// console.log("Hello World");
-let btn = document.getElementById("btn");
-btn.addEventListener("click",myFun)
-// console.log(btn);
+const panels = document.querySelectorAll('.panel')
 
-function myFun(){
-    let heading = document.querySelector("h1");
-    let inputValue = document.getElementById("inputValue").value;
-    if(inputValue != ''){ 
-    heading.innerHTML = inputValue;
-    document.querySelector("input").value = "";
-    console.log("Everything is working")
-    }
+panels.forEach(panel => {
+    panel.addEventListener('click',()=>{
+
+        removeActiveClasses()
+        panel.classList.add('active')
+    // console.log("working");
+    })
+})
+
+function removeActiveClasses(){
+    panels.forEach(panel => {
+        panel.classList.remove('active')
+        // console.log("also Working");
+    })
 }
-// myFun()
