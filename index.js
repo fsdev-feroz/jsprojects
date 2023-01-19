@@ -9,6 +9,7 @@ function myFun(){
     if(inputValue != ''){ 
     heading.innerHTML = inputValue;
     document.querySelector("input").value = "";
+    console.log("Everything is working")
     }
 }
 // myFun()
